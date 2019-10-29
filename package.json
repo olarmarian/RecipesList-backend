@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/netlify-lambda serve app",
     "build": "./node_modules/.bin/netlify-lambda build app",
-    "postinstall":"netlify-lambda install"
+    "postinstall": "netlify-lambda install"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "mongoose": "^5.7.0",
     "multer": "^1.4.2",
     "netlify-lambda": "^1.6.3",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "serverless-http": "^2.3.0"
   }
 }
