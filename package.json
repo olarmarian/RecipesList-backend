@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "prod":"npm run build:lambda",
-    "start:lambda": "netlify-lambda serve functions",
-    "build:lambda": "netlify-lambda build functions"
+    "start": "netlify-lambda serve functions",
+    "build": "netlify-lambda build functions"
   },
   "author": "",
   "license": "ISC",
