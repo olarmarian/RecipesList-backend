@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/netlify-lambda serve app",
-    "build": "./node_modules/.bin/netlify-lambda build app"
+    "prod":"npm run build:lambda",
+    "start:lambda": "netlify-lambda serve functions",
+    "build:lambda": "netlify-lambda build functions"
   },
   "author": "",
   "license": "ISC",
