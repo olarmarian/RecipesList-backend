@@ -3,16 +3,16 @@ const router = express.Router();
 const Recipe = require('../models/Recipes');
     
 
-router.get('/', async (req,res)=>{
-    try{
-        const posts = await Recipe.find();
-        res.status(200).json(posts);
-    }catch(err){
-        res.status(404).json({message:err})
-    }
-});
+// router.get('/', async (req,res)=>{
+//     try{
+//         const posts = await Recipe.find();
+//         res.status(200).json(posts);
+//     }catch(err){
+//         res.status(404).json({message:err})
+//     }
+// });
 
-router.route('/').get(async (req,res)=>{
+router.route('/').get((req,res)=>{
     Recipe.find()
         .then(recipes => res.status(200).json(recipes))
         .catch(err => {
@@ -23,7 +23,7 @@ router.route('/').get(async (req,res)=>{
 
 router.route('/:title').get((req,res) => {
     Recipe.find()
-        .where({type:req.params.type})
+        .where({type:req.params.title})
         .then(recipe => {
             res.status(200).json(recipe);
         })
