@@ -49,19 +49,3 @@ app.post('/drinks/save',FBAuth,postDrink);
 app.post('/drinks/:drinkId/upload',FBAuth,uploadeImage);
 app.post('/drinks/:drinkId/review',FBAuth,reviewDrink);
 exports.api = functions.https.onRequest(app);
-// require('dotenv/config')
-
-
-
-//Import Routes
-// const recipesRoute = require('../routes/recipes');
-
-
-// app.use('/recipes',recipesRoute);
-// app.use('./routes/recipes.js',recipesRoute);
-
-// module.exports.handler = serverless(app);
-
-// server.listen(3000,()=>{
-//     console.log("Server is running on port: ",3000);
-// });
